@@ -1,0 +1,66 @@
+//TODO : Move the family to the Styles.css
+//TODO: Create a styles file for colors
+
+a.nav-item.nav-link.active {
+    background: #066086 !important;    
+    border-radius: 100px;
+    color: #ffffff;
+}
+ 
+
+
+.irctc {
+     &-navbar{
+        &-bg {
+           background-color: rgba(248, 248, 248, 0.6);
+        }
+        &-style{
+            width: 74px;
+            height: 32px;
+            padding-left: 16px;
+            padding-right: 16px;         
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            display: inline-flex
+        }
+
+        &-right-style {
+            height: 32px;
+            padding-right: 32px;         
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            display: inline-flex
+        }
+
+        &-loginwrapper {
+            width: 32px; 
+            height: 32px; 
+            background: #009DDB; 
+            border-radius: 50px; 
+            justify-content: center; 
+            align-items: center; 
+            display: inline-flex;
+        }
+
+        &-loginname{
+            text-align: right; 
+            color: white; 
+            font-size: 14px; 
+            font-family: Inter; 
+            font-weight: 500; 
+            line-height: 18px; 
+            word-wrap: break-word
+        }
+
+     }
+
+
+     &-logo-tag{
+        margin-left: 2%
+     }
+}
+
+
+
