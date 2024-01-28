@@ -8,63 +8,10 @@ $irctc-color-bg-blue : #066086;
 $irctc-colo-nav-login-bg: #009DDB;
 $irctc-color-title-white: #F8F8F8;
 
-
-
-a.nav-item.nav-link.active {
-    background: $irctc-color-bg-blue !important;    
-    border-radius: 100px;
-    color: $irctc-color-white;
-}
  
 
 
 .irctc {
-     &-navbar{
-        &-bg {
-           background-color: rgba(248, 248, 248, 0.6);
-        }
-        &-style{
-            width: 74px;
-            height: 32px;
-            padding-left: 16px;
-            padding-right: 16px;         
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            display: inline-flex
-        }
-
-        &-right-style {
-            height: 32px;
-            padding-right: 32px;         
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            display: inline-flex
-        }
-
-        &-loginwrapper {
-            width: 32px; 
-            height: 32px; 
-            background: $irctc-colo-nav-login-bg; 
-            border-radius: 50px; 
-            justify-content: center; 
-            align-items: center; 
-            display: inline-flex;
-        }
-
-        &-loginname{
-            text-align: right; 
-            color: $irctc-color-white; 
-            font-size: 14px;
-            font-weight: 500; 
-            line-height: 18px; 
-            word-wrap: break-word
-        }
-
-     }
-
-
      &-logo-tag{
         margin-left: 2%
      }
