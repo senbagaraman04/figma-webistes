@@ -6,6 +6,9 @@
 $irctc-color-white : #ffffff;
 $irctc-color-bg-blue : #066086;
 $irctc-colo-nav-login-bg: #009DDB;
+$irctc-color-title-white: #F8F8F8;
+
+
 
 a.nav-item.nav-link.active {
     background: $irctc-color-bg-blue !important;    
@@ -64,6 +67,30 @@ a.nav-item.nav-link.active {
 
      &-logo-tag{
         margin-left: 2%
+     }
+
+
+     &-body-content{
+
+        &-ir{
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: flex-start;             
+             display: inline-flex;
+
+             &-title{
+                color: $irctc-color-title-white; 
+                font-size: 32px; 
+                font-weight: 500; 
+                word-wrap: break-word
+             }
+             &-tagline{
+                color: $irctc-color-title-white; 
+                font-size: 16px; 
+                font-weight: 500; 
+                word-wrap: break-word;
+             }
+        }
      }
 }
 
