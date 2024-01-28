@@ -7,25 +7,165 @@
 <!-- body IRCTC LOGO-->
 
 <div class="irctc-body-content-wrapper container">
-    <div class="row mt-4">
-        <div class="col-md-1">
-            <img src="../../../assets/homepage_ir_train.svg" alt="IR-logo">
-        </div>
-        <div class="col-md-5">
-            <div class="irctc-body-content-ir">
-                <div class="irctc-body-content-ir-title">Indian Railways</div>
-                <div class="irctc-body-content-ir-tagline">Safety | Security | Punctuality</div>
-            </div>
-        </div>
+  <div class="row mt-4">
+    <div class="col-md-1">
+      <img src="../../../assets/homepage_ir_train.svg" alt="IR-logo">
     </div>
+    <div class="col-md-5">
+      <div class="irctc-body-content-ir">
+        <div class="irctc-body-content-ir-title">Indian Railways</div>
+        <div class="irctc-body-content-ir-tagline">Safety | Security | Punctuality</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 <!--/ body IRCTC LOGO-->
 
-
+ 
 <!-- booking-frame-->
 
+
+<div class="irctc-body-booking-wrapper container">
+
+  <div class="">
+    <div class="irctc-body-booking-bg-image">
+      <div class="irctc-body-booking-search-card mt-4">
+
+        <div class="mt-0" style="margin-left:30vh;">
+          <div class="irctc-body-booking-card">
+            <p-tabView class="irctc-body-booking-tabview">
+              <p-tabPanel header="BOOK TICKET">
+                <div class="irctc-body-booking-switch row">
+                  <div class="form-check form-switch col-md-5">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Round Trip</label>
+                  </div>
+                  <div class="form-check form-switch col-md-5">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Flexible Date</label>
+                  </div>
+                </div>
+
+                <!-- Destinations -->
+                <div class="row mt-2">
+                  <div class="col-md-5">
+                    <input type="text" pInputText [(ngModel)]="fromStation"  placeholder="From"/>
+                  </div>
+                  <div class="col-md-1 mt-1">
+                     <img class="rever-direction-image" src="../../../assets/invert.svg" alt="Reverse Destination" (click)="reverseDestinationClick()"/>
+                  </div>
+                   <div class="col-md-6">
+                    <input type="text" pInputText [(ngModel)]="toStation" placeholder="To:" />
+                  </div>
+                </div>
+
+                  <!--Date and QUota-->
+
+
+                  <div class="row mt-2">
+                    <div class="col-md-5">
+                        <p-calendar  placeholder="Depature" [showIcon]="true" [(ngModel)]="date" [minDate]="minDate" [maxDate]="maxDate" [readonlyInput]="true"></p-calendar>
+                  
+                    </div>
+                   
+                     <div class="col-md-6 " >
+                      <div class="  flex justify-content-center">
+                        <p-dropdown [options]="quotas" [(ngModel)]="selectedQuota" optionLabel="name" [showClear]="true" placeholder="Quota"></p-dropdown>
+
+                      </div>  
+                    </div>
+                    <div class="col-md-1" >
+                      <div class="irctc-search-button">
+                        <p-button label="Search" icon="pi pi-search"></p-button>
+                        
+                  </div>
+                     
+                    </div>
+                    
+                  
+                   
+  
+                  </div>
+
+
+                  <!--hr line-->
+                             <div class="Line1 mt-3" style="align-self: stretch; height: 0px; border: 1px #D9D0E3 solid"></div>
+ <!-- /hr line-->
+
+<!--       
+ <div class="Frame9875"
+ style="justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+ <div class="Frame9866" style="justify-content: center; align-items: center; gap: 8px; display: flex">
+   <div class="RecentSearch"
+     style="color: #002234; font-size: 14px; font-family: Inter; font-weight: 600; text-transform: capitalize; word-wrap: break-word">
+     Recent Search</div>
+ </div>
+</div>
+<div class="Frame9881"
+ style="justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
+ <div class="Chips"
+   style="width: 100px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; border-radius: 100px; justify-content: center; align-items: center; gap: 4px; display: flex">
+   <div class="Delhi"
+     style="text-align: center; color: #667B85; font-size: 14px; font-family: Inter; font-weight: 400; text-transform: capitalize; word-wrap: break-word">
+     New Delhi</div>
+ </div>
+ <div class="Chips"
+   style="width: 83px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; border-radius: 100px; justify-content: center; align-items: center; gap: 4px; display: flex">
+   <div class="Delhi"
+     style="text-align: center; color: #667B85; font-size: 14px; font-family: Inter; font-weight: 400; text-transform: capitalize; word-wrap: break-word">
+     Kurnool</div>
+ </div>
+ <div class="Chips"
+   style="width: 95px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; border-radius: 100px; justify-content: center; align-items: center; gap: 4px; display: flex">
+   <div class="Delhi"
+     style="text-align: center; color: #667B85; font-size: 14px; font-family: Inter; font-weight: 400; text-transform: capitalize; word-wrap: break-word">
+     Prayagraj</div>
+ </div>
+ <div class="Chips"
+   style="width: 108px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; border-radius: 100px; justify-content: center; align-items: center; gap: 4px; display: flex">
+   <div class="Delhi"
+     style="text-align: center; color: #667B85; font-size: 14px; font-family: Inter; font-weight: 400; text-transform: capitalize; word-wrap: break-word">
+     Vijayawada</div>
+ </div>
+ <div class="Chips"
+   style="width: 75px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; border-radius: 100px; justify-content: center; align-items: center; gap: 4px; display: flex">
+   <div class="Delhi"
+     style="text-align: center; color: #667B85; font-size: 14px; font-family: Inter; font-weight: 400; text-transform: capitalize; word-wrap: break-word">
+     Indore</div>
+ </div>
+</div> -->
+
+
+              </p-tabPanel>
+              <p-tabPanel header="PNR STATUS">
+
+              </p-tabPanel>
+              <p-tabPanel header="TRAIN STATUS">
+
+              </p-tabPanel>
+            </p-tabView>
+
+
+
+
+             
+       
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+</div>
 
 
 
