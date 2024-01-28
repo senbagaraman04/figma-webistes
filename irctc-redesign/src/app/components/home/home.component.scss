@@ -1,10 +1,16 @@
 //TODO : Move the family to the Styles.css
 //TODO: Create a styles file for colors
+ 
+
+
+$irctc-color-white : #ffffff;
+$irctc-color-bg-blue : #066086;
+$irctc-colo-nav-login-bg: #009DDB;
 
 a.nav-item.nav-link.active {
-    background: #066086 !important;    
+    background: $irctc-color-bg-blue !important;    
     border-radius: 100px;
-    color: #ffffff;
+    color: $irctc-color-white;
 }
  
 
@@ -37,7 +43,7 @@ a.nav-item.nav-link.active {
         &-loginwrapper {
             width: 32px; 
             height: 32px; 
-            background: #009DDB; 
+            background: $irctc-colo-nav-login-bg; 
             border-radius: 50px; 
             justify-content: center; 
             align-items: center; 
@@ -46,9 +52,8 @@ a.nav-item.nav-link.active {
 
         &-loginname{
             text-align: right; 
-            color: white; 
-            font-size: 14px; 
-            font-family: Inter; 
+            color: $irctc-color-white; 
+            font-size: 14px;
             font-weight: 500; 
             line-height: 18px; 
             word-wrap: break-word
