@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 interface Quota {
@@ -25,10 +26,11 @@ export class HomeComponent implements OnInit {
   maxDate: Date = new Date();
 
 
-  quotas: Quota[] = []
-  selectedQuota: Quota | undefined;
+   selectedQuota: Quota | undefined;
+   trainSearchForm: FormGroup<TrainSearchFormGroup> = {} as FormGroup<TrainSearchFormGroup>;
 
 
+   constructor(private fb: FormBuilder){}
 
   ngOnInit() {
     let today = new Date();
@@ -41,12 +43,8 @@ export class HomeComponent implements OnInit {
     this.maxDate.setMonth(nextMonth);
 
 
-    this.quotas = [
-      { name: 'General Public', code: 'GP' },
-      { name: 'Senior Citizen', code: 'SC' },
-      { name: 'Tatkal', code: 'TKL' },
-      { name: 'Premium Taktal', code: 'PQTKL' },
-    ];
+    this.initializeForm();
+    
   }
 
 
@@ -57,4 +55,23 @@ export class HomeComponent implements OnInit {
 
   }
 
+
+  initializeForm() {  
+
+    this.trainSearchForm = this.fb.group({
+      fromStation: ['', Validators.required],
+      toStation:['', Validators.required],
+      travelDate: ['', Validators.required],
+      travelQuota: ['', Validators.required]
+    }) as FormGroup<TrainSearchFormGroup>;
+  }
+
+}
+
+export interface TrainSearchFormGroup {
+  
+  fromStation: FormControl<string>;
+  toStation: FormControl<string>;
+  travelDate: FormControl<string>;
+   travelQuota: FormControl<string>;
 }
