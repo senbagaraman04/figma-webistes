@@ -7,16 +7,14 @@
 <!-- body IRCTC LOGO-->
 
 <div class="irctc-body-content-wrapper container">
-  <div class="row mt-4">
-    <div class="col-md-1">
-      <img src="../../../assets/homepage_ir_train.svg" alt="IR-logo">
-    </div>
-    <div class="col-md-5">
-      <div class="irctc-body-content-ir">
-        <div class="irctc-body-content-ir-title">Indian Railways</div>
-        <div class="irctc-body-content-ir-tagline">Safety | Security | Punctuality</div>
+  <div class="row mt-4 justify-content-start">
+      <div class="col">
+        <img src="../../../assets/homepage_ir_train.svg" alt="IR-logo">
+        <div class="irctc-body-content-ir ">
+          <div class="irctc-body-content-ir-title">Indian Railways</div>
+          <div class="irctc-body-content-ir-tagline">Safety | Security | Punctuality</div>
+        </div>
       </div>
-    </div>
   </div>
 </div>
 
@@ -26,7 +24,7 @@
  
 <!-- booking-frame-->
 
-
+<!-- 
 <div class="irctc-body-booking-wrapper container">
 
   <div class="">
@@ -38,20 +36,18 @@
             <p-tabView class="irctc-body-booking-tabview">
               <p-tabPanel header="BOOK TICKET">
                 <div class="irctc-body-booking-switch row">
-                  <div class="form-check form-switch col-md-1">
-                   
-                  </div>
-                  <div class="form-check form-switch col-md-5">
+                
+                  <div class="form-check form-switch col-md-6">
                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                     <label class="form-check-label" for="flexSwitchCheckChecked">Round Trip</label>
                   </div>
-                  <div class="form-check form-switch col-md-5">
+                  <div class="form-check form-switch col-md-6">
                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
                     <label class="form-check-label" for="flexSwitchCheckChecked">Flexible Date</label>
                   </div>
                 </div> 
 
-                <!-- Destinations -->
+            
                 <div class="row mt-2">
                   <div class="col-md-5">
                     <input type="text" pInputText [(ngModel)]="fromStation"  placeholder="From"/>
@@ -64,8 +60,7 @@
                   </div>
                 </div>
 
-                  <!--Date and QUota-->
-
+              
 
                   <div class="row mt-2">
                     <div class="col-md-5">
@@ -99,9 +94,9 @@
                   </div>
 
 
-                  <!--hr line-->
+                
                              <div class="Line1 mt-3" style="align-self: stretch; height: 0px; border: 1px #D9D0E3 solid"></div>
- <!-- /hr line-->
+ 
 
               </p-tabPanel>
 
@@ -131,8 +126,34 @@
 
 
 
-</div>
-
+</div>   -->
 
 
 <!-- /booking-frame-->
+
+
+<div class="irctc-body-booking-wrapper container">
+
+  <div class="d-flex justify-content-center irctc-body-booking-bg-image">
+     <div class="card irctc-body-booking-card">
+
+      <ul class="nav nav-pills mb-3 shadow-sm" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false">Variable</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false" rel="noopener">Operators</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="true" rel="noopener">Values</a>
+        </li>
+      </ul>
+      </div>
+     
+
+
+  </div>
+
+ 
+
+</div>
