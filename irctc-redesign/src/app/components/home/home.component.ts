@@ -72,6 +72,10 @@ export class HomeComponent implements OnInit {
     //Further implementation can be added here
   }
 
+  reverseBtnClick(){
+    
+  }
+
 }
 
 export interface TrainSearchFormGroup {
