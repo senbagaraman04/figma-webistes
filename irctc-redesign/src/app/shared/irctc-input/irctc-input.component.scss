@@ -1,1 +1,8 @@
-//
+.irctc-input-component {
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+input[type=text]:focus {
+    border: 3px solid #009DDB;
+  }

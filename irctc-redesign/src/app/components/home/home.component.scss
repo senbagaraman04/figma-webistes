@@ -67,8 +67,8 @@ $irctc-color-title-white: #F8F8F8;
                box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
             }
             & a.active {
-               border-bottom: 2px solid #55c57a;
-               }
+               border-bottom: 2px solid $irctc-colo-nav-login-bg;
+            }
 
             & .nav-pills .nav-link.active {
                color: black !important;

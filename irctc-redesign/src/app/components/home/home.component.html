@@ -139,17 +139,29 @@
 
       <ul class="nav nav-pills mb-3 shadow-sm" id="pills-tab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false">Variable</a>
+          <a class="nav-link active tab-title" id="pills-home-tab" data-toggle="pill" (click)="tabTitleClick()" role="tab" aria-controls="pills-home" aria-selected="false">BOOKING</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false" rel="noopener">Operators</a>
+          <a class="nav-link tab-title" id="pills-profile-tab" data-toggle="pill" (click)="tabTitleClick()"  role="tab" aria-controls="pills-profile" aria-selected="false" rel="noopener">PNR STATUS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="true" rel="noopener">Values</a>
+          <a class="nav-link tab-title" id="pills-contact-tab" data-toggle="pill"(click)="tabTitleClick()"  role="tab" aria-controls="pills-contact" aria-selected="true" rel="noopener">TRAIN STATUS</a>
         </li>
       </ul>
-      </div>
-     
+
+
+       <div class="container row">
+        <div class="col-md-6">
+          <app-irctc-input placeholder="Source"></app-irctc-input>
+        </div>
+        <div class="col-md-6">
+          <app-irctc-input placeholder="Destination"></app-irctc-input>
+        </div>
+       </div>
+
+
+
+      </div>   
 
 
   </div>

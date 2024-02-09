@@ -66,6 +66,12 @@ export class HomeComponent implements OnInit {
     }) as FormGroup<TrainSearchFormGroup>;
   }
 
+
+
+  tabTitleClick() {
+    //Further implementation can be added here
+  }
+
 }
 
 export interface TrainSearchFormGroup {

@@ -2,6 +2,8 @@
 
 @import "primeicons/primeicons.css";
 
+ 
+
 :root {
     font-family: Inter, sans-serif !important;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
@@ -10,6 +12,7 @@
     :root { font-family: InterVariable, sans-serif; }
   }
 
+ 
 
   .irctc-body-wrapper{
     background-image: url("/assets/homepage.svg");   
